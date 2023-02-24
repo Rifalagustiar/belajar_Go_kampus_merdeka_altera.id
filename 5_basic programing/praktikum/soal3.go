@@ -9,7 +9,7 @@ func main() {
 		} else if i%3 == 0 {
 			fmt.Println("Fizz")
 		} else if i%5 == 0 {
-			fmt.Println("Buzz")
+			fmt.Println("Buzz antahahhh")
 		} else {
 			fmt.Println(i)
 		}
