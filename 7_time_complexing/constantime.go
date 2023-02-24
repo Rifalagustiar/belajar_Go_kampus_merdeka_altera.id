@@ -11,6 +11,7 @@ func dominant(n int, a [2]int) int {
 	return 1
 }
 func main() {
-	var arr = [2]int{2, 2}
-	fmt.Println(dominant(2, arr))
+
+	var rifal = [2]int{2, 2}
+	fmt.Println(dominant(2, rifal))
 }
