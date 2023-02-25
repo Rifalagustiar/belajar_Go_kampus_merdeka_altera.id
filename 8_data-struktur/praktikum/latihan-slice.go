@@ -3,11 +3,11 @@ package main
 import "fmt"
 
 func mapping(silce []string) map[string]int {
-	nilai := make(map[string]int)
+	data := make(map[string]int)
 	for _, v := range silce {
-		nilai[v]++
+		data[v]++
 	}
-	return nilai
+	return data
 }
 func main() {
 	fmt.Println(mapping([]string{"rifal", "izam", "ridha", "lahu"}))
