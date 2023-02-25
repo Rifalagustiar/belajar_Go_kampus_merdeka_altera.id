@@ -7,11 +7,11 @@ func pow(x, n int) int {
 		return 1
 	}
 	if n%2 == 0 {
-		check := pow(x, n/2)
-		return check * check
+		cek := pow(x, n/2)
+		return cek * cek
 	}
-	check := pow(x, (n-1)/2)
-	return x * check * check
+	cek := pow(x, (n-1)/2)
+	return x * cek * cek
 }
 func main() {
 	fmt.Println(pow(2, 3))
