@@ -3,23 +3,23 @@ package main
 import "fmt"
 
 func ArrayMerge(arrayA, arrayB []string) []string {
-	data := map[string]bool{}
-	datas := []string{}
+	data1 := map[string]bool{}
+	data2 := []string{}
 
 	for _, i := range arrayA {
-		if ya := data[i]; !ya {
-			data[i] = true
-			datas = append(datas, i)
+		if ya := data1[i]; !ya {
+			data1[i] = true
 		}
+		data2 = append(data2, i)
 	}
 
 	for _, i := range arrayB {
-		if ya := data[i]; !ya {
-			data[i] = true
-			datas = append(datas, i)
+		if ya := data1[i]; !ya {
+			data1[i] = true
+			data2 = append(data2, i)
 		}
 	}
-	return datas
+	return data2
 }
 
 func main() {
