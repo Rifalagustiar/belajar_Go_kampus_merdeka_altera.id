@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 func mapping(silce []string) map[string]int {
+
 	data := make(map[string]int)
 	for _, v := range silce {
 		data[v]++

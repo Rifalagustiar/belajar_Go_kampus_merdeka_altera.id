@@ -6,6 +6,7 @@ import (
 )
 
 func munculsekali(angka string) []int {
+
 	nilai := make(map[rune]int)
 	for _, v := range angka {
 		nilai[v]++
