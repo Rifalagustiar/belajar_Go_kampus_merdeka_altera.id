@@ -11,14 +11,14 @@ func binaryArray(n int) []int {
 }
 
 func nilai(n int) int {
-	count := 0
+	Nilai := 0
 	for n > 0 {
 		if n%2 == 1 {
-			count++
+			Nilai++
 		}
 		n /= 2
 	}
-	return count
+	return Nilai
 }
 
 func main() {
