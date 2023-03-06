@@ -11,7 +11,7 @@ func caesar(offset int, input string) string {
 		} else {
 			data := int(v) - 97
 			databaru := (data + offset) % 26
-			ambil := rune(databaru + 97)
+			ambil := int32(databaru + 97)
 			belajar += string(ambil)
 		}
 	}

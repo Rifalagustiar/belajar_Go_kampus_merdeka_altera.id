@@ -64,7 +64,7 @@ func main() {
 	}
 	totalscore := total / int(len(students))
 
-	// Menampilkan hasil
+	// Menampilkan hasil aau output
 	fmt.Println("Average score: ", totalscore)
 	fmt.Println("Min score of student: Yopan", minimum)
 	fmt.Println("Mix score of student: Yopan", maximum)

@@ -1,8 +1,6 @@
 package main
 
-import (
-	"fmt"
-)
+import "fmt"
 
 func getminmax(number ...*int) (min int, max int) {
 	min = *number[0]
