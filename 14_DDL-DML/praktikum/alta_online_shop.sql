@@ -1,0 +1,97 @@
+CREATE TABLE user (
+  id INT PRIMARY KEY,
+  name VARCHAR(30),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+ALTER TABLE user CHANGE id ID INT ;
+DESCribe user;
+ALTER TABLE user CHANGE id ID INT;
+DESCribe user;
+
+CREATE TABLE product (
+  ID INT PRIMARY KEY,
+  name VARCHAR(50),
+  price DECIMAL(10,2),
+  stock INT,
+  product_type_id INT,
+  operator_ID INT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+DESC product;
+CREATE TABLE product_type (
+  id INT PRIMARY KEY,
+  name VARCHAR(255)
+);
+DESC product_type;
+CREATE TABLE operators (
+  ID INT PRIMARY KEY,
+  name VARCHAR(50)
+);
+SHOW TABLES;
+CREATE TABLE product_description (
+  id INT PRIMARY KEY,
+  product_id INT,
+  description TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (product_id) REFERENCES product(ID)
+);
+SHOW TABLES;
+DESC product_description;
+
+CREATE TABLE payment_method (
+  id INT PRIMARY KEY,
+  name VARCHAR(20)
+);
+SHOW TABLES;
+
+CREATE TABLE s (
+  id INT PRIMARY KEY,
+  user_id INT,
+  payment_method_id INT,
+  total_price DECIMAL(10,2),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (user_id) REFERENCES user(ID),
+  FOREIGN KEY (payment_method_id) REFERENCES payment_method(id)
+);
+DESC transaction;
+CREATE TABLE transaction_detail (
+  id INT PRIMARY KEY,
+  transaction_id INT,
+  product_id INT,
+  quantity INT,
+  price DECIMAL(10,2),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (transaction_id) REFERENCES transaction(id),
+  FOREIGN KEY (product_id) REFERENCES product(ID)
+);
+
+CREATE TABLE kurir (
+  id INT PRIMARY KEY,
+  name VARCHAR(255),
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+SHOW TABLES;
+ALTER TABLE kurir ADD ongkos_dasar DECIMAL(10,2);
+DESC kurir;
+ALTER TABLE kurir RENAME TO shipping;
+SHOW TABLES;
+DROP TABLE shipping;
+SHOW TABLES;
+CREATE TABLE payment_method_description (
+  id INT PRIMARY KEY,
+  payment_method_id INT,
+  description TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  FOREIGN KEY (payment_method_id) REFERENCES payment_method
+);
+SHOW TABLES;
+
+
+
