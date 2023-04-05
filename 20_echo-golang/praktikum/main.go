@@ -43,7 +43,7 @@ func DeleteUserController(c echo.Context) error {
 		if user.Id == id {
 			users = append(users[:a], users[:a+1]...)
 			return c.JSON(http.StatusOK, map[string]interface{}{
-				"messages": "success menghapus user ",
+				"messages": "success",
 			})
 		}
 	}
