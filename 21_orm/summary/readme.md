@@ -1,0 +1,6 @@
+point 1
+ORM (Object-Relational Mapping): Materi KMGolang – ORM membahas bagaimana cara menggunakan library ORM pada Golang untuk mempermudah koneksi dan manipulasi database. ORM adalah teknik pemetaan antara data pada database dengan objek pada bahasa pemrograman, sehingga programmer dapat melakukan operasi CRUD (Create, Read, Update, Delete) dengan mudah tanpa harus menulis query SQL secara manual.
+point 2
+Code Structure (MVC): Materi KMGolang – Code Structure (MVC) membahas bagaimana cara membangun struktur kode yang baik dan efisien pada aplikasi Golang, khususnya dengan menggunakan pola desain Model-View-Controller (MVC). Dalam materi ini, dijelaskan bahwa struktur kode yang baik harus mudah dipahami, mudah dirawat, serta memisahkan tugas-tugas yang berbeda sesuai dengan pola MVC.
+point 3
+Penggunaan Package: Materi KMGolang – ORM and Code Structure (MVC) juga membahas bagaimana cara menggunakan package pada Golang untuk mempermudah proses pengembangan aplikasi. Dalam materi ini, dijelaskan bahwa package dapat digunakan untuk mengelompokkan fungsi-fungsi yang berkaitan dengan tugas tertentu, sehingga memudahkan programmer dalam membangun aplikasi yang scalable dan mudah dirawat.
